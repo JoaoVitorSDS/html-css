@@ -1,0 +1,291 @@
+   HTML significa HyperText Markup Language em portugues linguagem de marcação para hyper-texto.
+
+CSS significa Cascading Style Sheets em portugues Folhas de estilo em cascata.
+
+A linguagem HTML é uma linguagem focada em conteúdo, conteúdo pode ser texto, imagem, video, tabela, listas, tudo que for focado em conteúdo é HTML.
+
+CSS é focado em design ex: cores, sombras, tamanhos, posicionamento, fontes e etc
+
+HTML = conteúdo
+CSS = estilo
+JS = interatividade
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Em css toda declaração obrigatoriamente precisa ter ponto e virgula no final 
+ex:
+
+h1{
+font-family:Arial;  
+}
+
+
+h1 significa seletor, dentro de chaves temos declaração, font-family temos a propriedade e Arial; temos o valor.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Estrutura básica de documento HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+
+	</head>
+	
+	<body>
+
+	</body>
+</html>
+
+A area head é a area de configurações e body é o conteudo do site 
+
+<hr> significa linha na horizontal
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Formatos de imagens 
+
+PNG é para sempre que eu quiser usar imagens com fundo transparente e com a qualidade melhor.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JPEG/JGP é para quando quiser usar uma imagem e a compactação é algo muito importante.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML5 Vai se focar no que chamamos de tags semânticas tags com significado mais do que forma significado e isso tudo facilita o navegador analisar o seu site
+
+html5  significado, semântica
+css3 estilo, forma
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sempre que fizermos uma citação usaremos a tag <q></q> para citações simples sem quebra de linha.
+
+Para citações completas citações no estilo blockquote usamos <blockquote></blockquote> serve para fazermos citações mais completas e também indicar a referencia com o 
+parametro cite="". ex:
+
+<blockquote cite="https://www.google.com.br/books/edition/Fundamentos_de_HTML5_e_CSS3/2iPYCQAAQBAJ?hl=pt-BR&gbpv=1&dq=html&printsec=frontcover">
+    DOM é a sigla em inglês para Document Object Model e, que, em português, significa Moledo de objeto de documento.
+</blockquote>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Lista para acessar todos os midias types
+https://www.iana.org/assignments/media-types/media-types.xhtml
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Imagens dinâmicas
+
+Imagem que vai carregando de acordo com a largura da sua tela vai se adaptando ao tamanho da sua tela do seu dispositivo que esta acessando a internet.
+
+<picture>
+    <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"> <!--o tamanho sendo menor ou igual a 750 vai carregar a imagem pequena-->
+    <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!--o tamanho sendo menor ou igual a 1050 vai carregar a imagem media-->
+    <img src="imagens/foto-g.png" alt="Imagem flexível">
+</picture>
+
+obs: para usarmos imagem e ela se adaptar ao tamanho em que o usuario ve a ela ou ao tamanho/dispositivo  da tela do usuario. E uma regra bem importante as imagens tem que 
+estar em ordem sempre se estiver fora de ordem não vai abrir alguns tamanhos. 
+ex:
+<picture>  
+    <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!--o tamanho sendo menor ou igual a 1050 vai carregar a imagem media-->
+    <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"> <!--o tamanho sendo menor ou igual a 750 vai carregar a imagem pequena-->
+    <img src="imagens/foto-g.png" alt="Imagem flexível">
+</picture>
+
+Neste caso acima a imagem pequena não vai ser reconhecida pelo navegador e não vai ser exibida e assim vice-versa. Sempre tem que ser ou do maior para o menor ou do menor 
+para o maior.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Reproduzindo Áudios
+
+Formatos para usar em áudios temos MP3 WAV e OGG alguns navegadores pode acabar não suportando algum desses formatos e por isso é sempre bom colocarmos varios formatos como 
+substitudo.
+E para adicionar um audio usamos o comando <audio></audio>
+ex:
+<audio preload="metadata" controls>
+  <source src="midia/Underground Academy - Hanu Dixit.mp3" type="audio/mpeg"> <!--formato mpeg significa formato mp3-->
+
+  <source src="midia/Underground Academy - Hanu Dixit.mp3" type="audio/ogg">
+
+  <source src="midia/Underground Academy - Hanu Dixit.mp3" type="audio/wav"> <!--Wav não é muito recomendado por ser arquivos muito grande e pesados então não recomendo usar formato wav
+
+  <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/Underground Academy - Hanu Dixit.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+</audio>
+Obs: o navegador vai primeiro tentar carregar o primeiro formato no caso mpeg/mp3 e depois segue em forma decrescente, ogg, wav e caso não tenha compatibilidade com nenhum dos
+arquivos ele vai sugerir a tag p que direciona o para o download do áudio.
+Existe alguns tipos de valores para preload:
+
+metadata vai carregar apenas as informações sobre o arquivo (tamanho,
+tempo, informações de direitos, etc)
+๏ none não vai carregar absolutamente nada até que o usuário clique no botão
+play ou um script inicie a reprodução
+๏ auto (padrão) vai carregar o arquivo de áudio inteiro assim que a página for
+carregada, mesmo que o usuário nunca aperte o play
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Videos hospedados no proprio site
+
+Videos hospedados no proprio site deve e vão consumir muito trafego de dados então muito cuidado ao utilizar 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Modulo 2 Capítulo 13
+
+Psicologia das cores é muito importante para a criação de um site ou de diversas coisas porque cada cor transmite uma sensação diferente ao usuario e pode ser 
+usada em diversas combinações agradaveis é de suma importancia conhcer as caracteristicas de cada cor antes de usa-la.
+
+https://rockcontent.com/br/blog/psicologia-das-cores/ 
+
+Um link para ter uma ideia mais clara de todos as caracteristicas das principais cores e entende-las.
+E vale ressaltar que escolher uma boa paleta de cores para o seu site/marca/produto... é extremamente importante.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cores
+
+Harmonia de cores em CSS
+
+Circulo Cromático
+
+cores primárias: amarelo, vermelho, azul  essas são as três principais cores
+cores secundárias: verde, laranja, violeta essas são as cores secundárias
+cores terciárias: são todas as outras cores que são mistura das cores primárias e secundárias. Vale ressaltar que sempre que você for dar um nome para uma cor terciária você
+sempre vai colocar o nome da cor primária primeiro e depois o da secundária e também toda cor terciária esta entre uma cor primária e uma secundária.
+ex: amarelo-esverdeado, amarelo-alaranjado, vermelho-alaranjado, vermelho-arroxeado, azul-arroxeado, azul-esverdeado.
+
+Temperatura de Cores
+
+cores frias e cores quentes
+cores frias: amarelo-esverdeado, verde, azul-esverdeado, azul, azul-arroxeado, violeta
+cores quentes: amarelo, amarelo-alaranjado, laranja, vermlho-alaranjado, vermelho, vermelho-arroxeado
+
+Cores complementares são aquelas cores que tem mais contraste entre si.
+ex: violeta e amarelo/ azul e laranja
+
+Cores análogas são cores que ao contrario das cores complementares são aquelas cores que não tem contraste tão grande entre elas.
+ex: violeta, vermelho-arroxeado, azul-arroxeado
+Como saber quais são as cores análogas é so você pegar as duas cores vizinhas e ai eu tenho uma similariedade atraves de cores
+
+Cores Análogas e uma Complementar essa técnica quebra um pouco o ritmo semelhante das cores análogas, adicionando uma cor que cria um grande contraste com as três análogas.
+ex: violeta, vermelho-arroxeado, azul-arroxeado, amarelo
+
+Cores análogas Relacionadas com essa técnica, conseguimos um resultado parecido com a das cores análogas simples, mas com um pouco mais de contraste sem ter que escolher uma 
+cor complementar.
+ex:amarelo, amarelo-alaranjado,vermelho-alaranjado
+Neste tipo de harmonia, escolhemos duas cores análogas(consecutivas) e depois pulamos uma terceira cor(em qualquer direção) e escolhemos a quarta
+
+Cores Intercaladas um tipo menos usado de harmonia, já que ás vezes não funciona tão bem assim. Vamos escolher a primeira cor depois mais duas com intervalo constante entre 
+elas. 
+ex:amarelo-esverdeado, azul-esverdeado, azul-arroxeado
+Criei um exemplo onde o intervalo é constante entre as cores selecionadas.
+
+Cores triádicas esse esquema gera sempre um triângulo equilátero e cria uma opção que sempre possui um ótimo contraste entre as cores.
+ex:amarelo, vermelho, azul
+Eécnica bastante utilizada e que garante uma grande riqueza de cores, onde escolhemos três ponstos equidistantes no cícrulo cromático.
+
+Cores em quadrado esse esquema gera sempre um quadrado perfeito com os pontos selecionados.
+ex: amarelo, vermelho-alaranjado, violeta, azul-esverdeado
+Bastante semelhante ao esquema triádico, mas permite selecionar quatro cores com um contraste razoável entre as cores escolhidas.
+
+Cores tetrádicas com essa técnica, vamos escolher dois apres de cores complementares, que não serão necessariamente análogas ou consecutivas. Isso vai nos garantir dois pares 
+de cores, com bastante contraste entre si.
+ex:amarelo-alaranjado,laranja,azul, azul-arroxeado
+
+Monocromia uma harmonia bem diferente das anteriores, que usa apenas uma cor e varia apenas a sua satuação e o seu brilho. Essa combinção geralmente gera pouquíssimo contraste
+entre as cores escolhidas, mas acaba gerando um resultado visual bem agradável aos olhos, conhecido como "degrade".
+
+https://color.adobe.com/pt/create/color-wheel
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Capitulo 14 
+
+Tipografia
+
+A letra x é o ponto de partida para construção de todas as fontes, quando alguem vai construir uma fonte nova em primeiro lugar eles desenham o x minusculo primeiro porque 
+existe uma metrica chamada altura  x, basicamente qual é a altura do seu x nessa fonte, ela vai definir qual e a altura base de todas as letras minusculas.
+
+Então quando vamos difinir uma fonte a gente tem que saber qual é a altura do corpo dela, porque é a altura do corpo que eu configuro no CSS
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Tamanho de fontes 
+
+Medidas Absolutas:
+cm = centimetro
+mm = milimetro
+in = polegada 
+px = pixel
+pt = ponto
+pc = paica
+
+
+Medidas Relativas:
+
+em = medida relativa ao tamanho atual da fonte
+ex = medida relativa a altura x de uma fonte
+rem = é parecido com em so que ela é relativa a rut a fonte que esta configurada no body
+vw = view port é o tamanho da sua tela então ela é a porcentagem da largura de uma view port
+vh = é a altura da view port
+%
+
+A W3C recomenda usar apenas as medidas px e em.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Peso da fonte 
+
+Peso da fonte é basicamente a largura dela, e para conseguirmos alterar esse peso usamos ''font-weight'' mas cuidado na hora de usar para nao confundir com width e height
+weight é peso width é largura e height é altura.
+E no font-weight temos os peso literais e os numerais os literais sao: lighter, normal, bold, bolder os numericos sao de 100 - 900 vale ressaltar que nem todas as fonte tem 
+todos os tipos de peso alias poucas teram então tem que tomar cuidado.
+Então usamos font-weight para podermos alterar o peso da fonte coloca-la em negrito ou deixa la mais leve e em font-style podemos coloca-la em italic.
+
+Usaremos muito 
+font-family:
+font-weight:
+font-size:
+font-style
+
+E para agilizar esse processo existe um metodo chamado shorthand para encurtar esse processo e para isso primeiro temos que decorar/saber a ordem correta.
+primeiro começamos com font: font-syle -> font-weight -> font-size -> font-family então essa é a ordem correta. 
+ex:
+font: italic bolder 3em 'Work Sans', sans-serif;
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Pseudo Class
+
+pseudo classes são palavras que definem  estados de elementos dentro do html
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Pseudo Elementos
+
+o pseudo elemento ele pode agir nas classes nos elementos nos id eles mexem no conteudo diretamente no conteudo periferico do elemento
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seletores personalizados
+
+# = id
+. = class
+: = pseudo-class
+:: = pseudo-element
+> = clildren(filho)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tipos de Caixa
+
+box-level uma caixa do tipo box-level sempre vai iniciar em uma nova linha e sempre vai ocupar a largura total da tela e vai quebrar uma linha para continuar o conteudo.
+ex: elementos do tipo box-level
+
+<div> <h1>-<h6> <p> <main> <header> <nav> <article> <aside> <footer> <form> <video>
+
+inline-level nao pula pra proxima linha ele vai desenhar uma caixa exatamente do tamanho do conteudo do seu elemento e nao vai quebrar uma linha ele vai continuar o conteudo.
+ex: elementos do tipo inline-level
+
+<span> <a> <code> <small> <strong> <em> <sup>-<sub> <label> <input> <select>
+
+User agent é sempre o navegador que está exibindo o seu conteudo
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Git = repositorio local
+
+GitHub = repositorio remoto basicamente nuvem
